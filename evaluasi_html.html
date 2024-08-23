@@ -1,128 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan HTML & Formulir Pendaftaran</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 20px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        table {
-            width: 50%;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 8px 0;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <h1>Selamat Datang di Latihan HTML & Formulir</h1>
-    <p>Halaman ini dibuat untuk mengevaluasi dan melatih kemampuan dasar dalam penggunaan HTML serta pembuatan formulir.</p>
-    
-    <h2>Manipulasi Teks</h2>
-    <p>Berikut adalah contoh paragraf dengan beberapa bagian yang <strong>tebal</strong> dan <em>miring</em>. Menggunakan tag yang tepat sangat penting untuk tampilan yang konsisten.</p>
-    <hr>
-    <blockquote>"Tetaplah bersabar, karena orang sabar kan mendapatkan keberuntungan"</blockquote>
+    <div class="container-utama">
+        <h1>Selamat Datang di Latihan HTML & Formulir</h1>
+        <p>Halaman ini dibuat untuk mengevaluasi dan melatih kemampuan dasar dalam penggunaan HTML serta pembuatan formulir.</p>
+        
+        <h2>Manipulasi Teks</h2>
+        <p>Berikut adalah contoh paragraf dengan beberapa bagian yang <strong>tebal</strong> dan <em>miring</em>. Menggunakan tag yang tepat sangat penting untuk tampilan yang konsisten.</p>
+        <hr>
+        <blockquote>"Tetaplah bersabar, karena orang sabar kan mendapatkan keberuntungan"</blockquote>
 
-    <h2>Hyperlink dan Gambar</h2>
-    <p>Kunjungi <a href="https://github.com/">GitHub</a> untuk melihat lebih banyak proyek menarik.</p>
-    <img src="https://i.pinimg.com/564x/10/0d/11/100d1116e1d752d0c946826a442ca488.jpg" alt="Naruto">
+        <h2>Hyperlink dan Gambar</h2>
+        <p>Kunjungi <a href="https://github.com/">GitHub</a> untuk melihat lebih banyak proyek menarik.</p>
+        <img src="https://i.pinimg.com/564x/10/0d/11/100d1116e1d752d0c946826a442ca488.jpg" alt="Naruto">
 
-    <h2>Membuat Daftar</h2>
-    <ol>
-        <li>Menyiapkan dokumen HTML dengan baik</li>
-        <li>Belajar CSS untuk memperindah tampilan</li>
-        <li>Memahami dasar-dasar JavaScript</li>
-    </ol>
-    <ul>
-        <li>Musikan</li>
-        <li>Nonton</li>
-        <li>Jajan</li>
-    </ul>
+        <h2>Membuat Daftar</h2>
+        <ol>
+            <li>Menyiapkan dokumen HTML dengan baik</li>
+            <li>Belajar CSS untuk memperindah tampilan</li>
+            <li>Memahami dasar-dasar JavaScript</li>
+        </ol>
+        <ul>
+            <li>Musikan</li>
+            <li>Nonton</li>
+            <li>Jajan</li>
+        </ul>
 
-    <h2>Tabel Informasi</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
-        <tr>
-            <th>Nama</th>
-            <th>Umur</th>
-            <th>Kota</th>
-        </tr>
-        <tr>
-            <td>Hel</td>
-            <td>23</td>
-            <td>Bandung</td>
-        </tr>
-        <tr>
-            <td>Atsal</td>
-            <td>22</td>
-            <td>Semarang</td>
-        </tr>
-        <tr>
-            <td>Farrel</td>
-            <td>23</td>
-            <td>Bekasi</td>
-        </tr>
-    </table>
+        <h2>Tabel Informasi</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Kota</th>
+            </tr>
+            <tr>
+                <td>Hel</td>
+                <td>23</td>
+                <td>Bandung</td>
+            </tr>
+            <tr>
+                <td>Atsal</td>
+                <td>22</td>
+                <td>Semarang</td>
+            </tr>
+            <tr>
+                <td>Farrel</td>
+                <td>23</td>
+                <td>Bekasi</td>
+            </tr>
+        </table>
+    </div>
 
-    <h2>Formulir Pendaftaran</h2>
-    <form action="/submit" method="post">
-        <label for="nama">Nama Lengkap :</label>
-        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"><br>
+    <div class="container-form">
+        <h2>Formulir Pendaftaran</h2>
+        <form action="/submit" method="post">
+            <label for="nama">Nama Lengkap :</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Masukkan email Anda"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda"><br>
 
-        <label for="gender">Jenis Kelamin:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Laki-laki</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Perempuan</label><br>
+            <label for="gender">Jenis Kelamin:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Perempuan</label><br>
 
-        <label for="kota">Kota Tempat Tinggal:</label><br>
-        <select name="kota" id="kota">
-            <option value="bandung">Bandung</option>
-            <option value="jakarta">Jakarta</option>
-            <option value="surabaya">Surabaya</option>
-            <option value="yogyakarta">Yogyakarta</option>
-        </select><br>
+            <label for="kota">Kota Tempat Tinggal:</label><br>
+            <select name="kota" id="kota">
+                <option value="bandung">Bandung</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="yogyakarta">Yogyakarta</option>
+            </select><br>
 
-        <label for="pesan">Pesan atau Saran:</label><br>
-        <textarea name="pesan" id="pesan" rows="4" cols="50" placeholder="Tulis pesan atau saran Anda disini"></textarea><br>
+            <label for="pesan">Pesan atau Saran:</label><br>
+            <textarea name="pesan" id="pesan" rows="4" cols="50" placeholder="Tulis pesan atau saran Anda disini"></textarea><br>
 
-        <input type="checkbox" id="syarat" name="syarat">
-        <label for="syarat">Saya menyetujui syarat dan ketentuan</label><br>
+            <input type="checkbox" id="syarat" name="syarat">
+            <label for="syarat">Saya menyetujui syarat dan ketentuan</label><br>
 
-        <input type="submit" value="Kirim">
-    </form>
+            <input type="submit" value="Kirim">
+        </form>
+    </div>
 </body>
+
 </html>
